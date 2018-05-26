@@ -11,13 +11,17 @@ Bet manually per artisan'ą veikia tvarkingai, ir bandant schedule:run erroru ne
 - php artisan migrate
 
 - config/app.php\
+<pre>
     'providers' => [\
         ....\
         Exc\Todo\TodoServiceProvider::class,\
         Exc\Weather\WeatherServiceProvider::class,\
         ....\
     ]
+</pre>
 
 - pasiekiama adresais\
-    &lt;host&gt;/todo\
-    &lt;host&gt;/weather
+<pre>
+    *host*/todo\
+    *host*/weather
+</pre>
