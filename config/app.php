@@ -151,6 +151,9 @@ return [
          * Package Service Providers...
          */
 
+        Exc\Todo\TodoServiceProvider::class,
+        Exc\Weather\WeatherServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
