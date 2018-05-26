@@ -42,10 +42,7 @@
             }
             
             .todo-item {
-                background: #dfffdf;
                 color: black;
-                border-radius: 5px;
-                padding: 5px;
                 margin-bottom: 10px;
             }
         </style>
@@ -56,7 +53,7 @@
                 <div class="title">
                     To-Do List
                 </div>
-                <div class="content">
+                <div class="todo-list">
                 @foreach ($items as $item)
                     <div class="todo-item">
                         <div class="toto-text">{{$item->text}}</div>

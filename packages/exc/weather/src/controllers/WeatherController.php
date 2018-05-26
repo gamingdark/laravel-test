@@ -12,7 +12,8 @@ use Exc\Weather\WeatherHandler;
 
 class WeatherController extends Controller
 {
-    public function info() {
+    public function info()
+    {
         $data = array();
         
         $location = Location::first();
@@ -32,7 +33,8 @@ class WeatherController extends Controller
         return view('weather::info', $data);
     }
     
-    public function location(Request $request) {
+    public function location(Request $request)
+    {
         $location = Location::find(1);
         
         if ($location == null) {
@@ -46,7 +48,8 @@ class WeatherController extends Controller
         return Redirect::to('weather');
     }
     
-    public function subscribe(Request $request) {
+    public function subscribe(Request $request)
+    {
         $data = $request->input();
         $exists = Subscribtion::where('email', $data['email'])->count();
         
@@ -57,7 +60,8 @@ class WeatherController extends Controller
         return Redirect::to('weather');
     }
     
-    public function unsubscribe($id) {
+    public function unsubscribe($id)
+    {
         $subscribtion = Subscribtion::findOrFail($id);
         
         $subscribtion->delete();

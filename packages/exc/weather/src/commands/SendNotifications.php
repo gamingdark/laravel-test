@@ -53,7 +53,7 @@ class SendNotifications extends Command
         $windSpeed = WeatherHandler::getWindSpeed($location->locationstring);
         
         // for testing
-        $windSpeed = rand(0, 100) / 5;
+        // $windSpeed = rand(0, 100) / 5;
         
         $notification = Notification::getStatus();
         
@@ -64,14 +64,15 @@ class SendNotifications extends Command
             $this->info('Sending notifications for wind speed increasing');
             $this->notify("Weather by ExC - wind increasing!", "Wind speed in $location->locationstring increasing! Current speed: $windSpeed m/s");
             Notification::create(['status' => 'wind_up']);
-        } else if ($windSpeed < WeatherHandler::WIND_SPEED_THRESHOLD && $notification->status == 'wind_up') {
+        } elseif ($windSpeed < WeatherHandler::WIND_SPEED_THRESHOLD && $notification->status == 'wind_up') {
             $this->info('Sending notifications for wind speed decreasing');
             $this->notify("Weather by ExC - wind decreasing!", "Wind speed in $location->locationstring decreasing! Current speed: $windSpeed m/s");
             Notification::create(['status' => 'wind_down']);
         }
     }
     
-    private function notify($subject, $content) {
+    private function notify($subject, $content)
+    {
         $subscribtions = Subscribtion::all();
         
         foreach ($subscribtions as $subscribtion) {

@@ -40,14 +40,6 @@
             .title {
                 font-size: 84px;
             }
-            
-            .todo-item {
-                background: #dfffdf;
-                color: black;
-                border-radius: 5px;
-                padding: 5px;
-                margin-bottom: 10px;
-            }
         </style>
     </head>
     <body>

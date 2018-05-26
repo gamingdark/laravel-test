@@ -8,7 +8,8 @@ class Notification extends Model
 {
     protected $fillable = ['status'];
     
-    public static function getStatus() {
+    public static function getStatus()
+    {
         $notification = Notification::orderby('created_at', 'desc')->first();
         
         $result = array(
