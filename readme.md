@@ -10,13 +10,13 @@ Bet manually per artisan'ą veikia tvarkingai, ir bandant schedule:run erroru ne
   
 - php artisan migrate
 
-- config/app.php\
+- config/app.php
 <pre>
-    'providers' => [\
-        ....\
-        Exc\Todo\TodoServiceProvider::class,\
-        Exc\Weather\WeatherServiceProvider::class,\
-        ....\
+    'providers' => [
+        ....
+        Exc\Todo\TodoServiceProvider::class,
+        Exc\Weather\WeatherServiceProvider::class,
+        ....
     ]
 </pre>
 
