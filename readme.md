@@ -14,10 +14,10 @@ Bet manually per artisan'ą veikia tvarkingai, ir bandant schedule:run erroru ne
     'providers' => [\
         ....\
         Exc\Todo\TodoServiceProvider::class,\
-        Exc\Weather\WeatherServiceProvider::class,
+        Exc\Weather\WeatherServiceProvider::class,\
         ....\
     ]
 
 - pasiekiama adresais\
-    <host>/todo\
-    <host>/weather
+    &lt;host&gt;/todo\
+    &lt;host&gt;/weather
