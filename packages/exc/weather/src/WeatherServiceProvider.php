@@ -21,12 +21,12 @@ class WeatherServiceProvider extends ServiceProvider
         
         $this->app->booted(function () {
             $schedule = app(Schedule::class);
-            $schedule->command('weather:notify')->everyFiveMinutes();
+            $schedule->command('weather:notify')->everyTenMinutes();
         });
         
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Console\Commands\SendNotifications::class,
+                Commands\SendNotifications::class,
             ]);
         }
     }
@@ -39,12 +39,5 @@ class WeatherServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->make('Exc\Weather\Controllers\WeatherController');
-        
-        //$this->app->singleton('exc.weather.console.kernel', function($app) {
-        //    $dispatcher = $app->make(\Illuminate\Contracts\Events\Dispatcher::class);
-        //    return new \Exc\Weather\Console\Kernel($app, $dispatcher);
-        //});
-
-        //$this->app->make('exc.weather.console.kernel');
     }
 }
