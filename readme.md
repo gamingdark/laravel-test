@@ -6,7 +6,7 @@ Bet manually per artisan'ą veikia tvarkingai, ir bandant schedule:run erroru ne
 ## Package installation
 
 - composer require exc/todo dev-master\
-  composer require exc/todo dev-master
+  composer require exc/weather dev-master
   
 - php artisan migrate
 
