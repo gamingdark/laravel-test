@@ -21,7 +21,5 @@ Bet manually per artisan'ą veikia tvarkingai, ir bandant schedule:run erroru ne
 </pre>
 
 - pasiekiama adresais\
-<pre>
     *host*/todo\
     *host*/weather
-</pre>
